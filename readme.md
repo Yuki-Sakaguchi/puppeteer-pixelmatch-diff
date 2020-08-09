@@ -14,7 +14,7 @@ npm run start
 - サイトドメイン
 - basic認証
 - 撮影するviewport
-- 撮影するまでのwaitTime
+- 撮影するまでのwaitTime
 
 ### settings/targets.json
 サイトのパスはこのjsonで設定する。  
