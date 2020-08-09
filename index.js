@@ -55,16 +55,20 @@ function* doneReading (options) {
     height: img1.height
   })
 
-  pixelmatch(
-    img1.data,
-    img2.data,
-    diff.data,
-    img1.width,
-    img2.height,
-    {
-      threshold: 0.01
-    }
-  )
+  try {
+    pixelmatch(
+      img1.data,
+      img2.data,
+      diff.data,
+      img1.width,
+      img2.height,
+      {
+        threshold: 0.01
+      }
+    )
+  } catch (e) {
+    console.log(`[error] ${options.diffPath}\n${e}`)
+  }
 
   return diff.pack().pipe(fs.createWriteStream(options.diffPath))
 }
@@ -119,6 +123,7 @@ async function main () {
         })
         distFilePath.push(dist)
       }
+
       // 差分をチェック
       compareScreenshots(`${DIFF_PATH}${viewportName}/${path.name}.png`, ...distFilePath)
       console.log(`[差分確認完了] ${DIFF_PATH}${viewportName}/${path.name}.png`)
