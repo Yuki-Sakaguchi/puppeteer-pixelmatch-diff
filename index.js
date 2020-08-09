@@ -33,8 +33,8 @@ async function takeScreenshot (options) {
  */
 function compareScreenshots (diffPath, path1, path2) {
   const defaultCompare = doneReading({
-    img1: fs.createReadStream(path1).pipe(new PNG()).on('parsed', () => { defaultCompare.next() }),
-    img2: fs.createReadStream(path2).pipe(new PNG()).on('parsed', () => { defaultCompare.next() }),
+    img1: fs.createReadStream(path1).pipe(new PNG()).on('parsed', () => defaultCompare.next()),
+    img2: fs.createReadStream(path2).pipe(new PNG()).on('parsed', () => defaultCompare.next()),
     diffPath
   })
 }
@@ -121,6 +121,7 @@ async function main () {
       }
       // 差分をチェック
       compareScreenshots(`${DIFF_PATH}${viewportName}/${path.name}.png`, ...distFilePath)
+      console.log(`[差分確認完了] ${DIFF_PATH}${viewportName}/${path.name}.png`)
     }
   }
 
