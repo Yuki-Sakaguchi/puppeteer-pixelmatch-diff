@@ -1,0 +1,25 @@
+{
+  "sites": {
+    "production": {
+      "url": "https://uuuundefined.tokyo"
+    },
+    "development": {
+      "url": "https://uuuundefined.tokyo",
+      "auth": {
+        "username": "id",
+        "password": "password"
+      }
+    }
+  },
+  "viewport": {
+    "pc": {
+      "width": 1200,
+      "height": 800
+    },
+    "sp": {
+      "width": 375,
+      "height": 644 
+    }
+  },
+  "waitTime": 0 
+}
