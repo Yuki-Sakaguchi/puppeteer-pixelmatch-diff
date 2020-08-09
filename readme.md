@@ -22,3 +22,9 @@ npm run start
 ## 主なライブラリ
 - puppeteer
 - pixelmatch
+
+## 参考
+- https://qiita.com/parada/items/fda297075204ae274a9a
+- https://qiita.com/taminif/items/1ba7f68aedd68bae5e09
+- https://qiita.com/teradonburi/items/72dcb3816e3e2a6ee1e6
+- https://www.gesource.jp/weblog/?p=7672
