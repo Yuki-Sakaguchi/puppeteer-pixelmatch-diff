@@ -28,3 +28,4 @@ npm run start
 - https://qiita.com/taminif/items/1ba7f68aedd68bae5e09
 - https://qiita.com/teradonburi/items/72dcb3816e3e2a6ee1e6
 - https://www.gesource.jp/weblog/?p=7672
+- https://solutionware.jp/blog/2019/01/01/puppeteer%E3%81%AB%E3%82%88%E3%82%8Bweb%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0-%E5%9F%BA%E7%A4%8E%E7%B7%A8/
