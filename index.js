@@ -19,7 +19,7 @@ const paths = JSON.parse(fs.readFileSync('./settings/targets.json', 'utf8'))
 async function takeScreenshot (options) {
   const page = options.page
   if (options.auth) await page.authenticate(options.auth)
-  await page.goto(options.url)
+  await page.goto(options.url, { waitUntil: 'networkidle0' })
   if (options.waitTime) await page.waitFor(options.waitTime)
   await page.screenshot({
     path: options.dist,
